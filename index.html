@@ -21,8 +21,8 @@
 </head>
 <body>
 	<h1>コンピューター対戦じゃんけん</h1>
-	<p><small>最大で20試合し、得点の高い方か、先に10点取った方がゲームの勝者です。</small></p>
-	<p>対戦回数: <span id="game_counter">1</span>回目/20回
+	<p><small>最大で4試合し、得点の高い方か、先に2点取った方がゲームの勝者です。</small></p>
+	<p>対戦回数: <span id="game_counter">1</span>回目/4回
 	あなた：<meter min="0" max="10" value="0" high="8" id="player1_meter"></meter> (<span id="player1_meter_value">0</span>点)
 	コンピューター：<meter min="0" max="10" value="0" high="8" id="player2_meter"></meter> (<span id="player2_meter_value">0</span>点)</p>
 	<div id="select_hand">
@@ -124,8 +124,8 @@
 		result.style.display = 'block';
 
 		// ゲームの終了処理
-		// 先に10点とるか、20回試合した場合はゲームオーバーです
-		if(player1_win >= 10 || player2_win >= 10 || counter === 20){
+		// 先に2点とるか、4回試合した場合はゲームオーバーです
+		if(player1_win >= 2 || player2_win >= 2 || counter === 4){
 			gameover();
 		}
 	}
